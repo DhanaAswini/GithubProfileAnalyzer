@@ -1,54 +1,30 @@
-# React + TypeScript + Vite
+🚀 Deployment Instructions (PowerShell)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Follow the steps below to run and deploy the project locally using PowerShell:
 
-Currently, two official plugins are available:
+✅ Prerequisites
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You have a Vercel account: https://vercel.com
 
-## Expanding the ESLint configuration
+Your app is pushed to GitHub, GitLab, or Bitbucket
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+You have Node.js installed
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+You have Vercel CLI (optional, for CLI deployment)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Option 1: 🌐 Deploy via Vercel Dashboard (GUI)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+  -> Go to https://vercel.com/dashboard
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+  -> Click "Add New Project"
+
+  -> Choose your GitHub repository (e.g. github-profile-analyzer)
+
+  -> Set Framework Preset to: Vite
+
+  ->Leave everything else as default
+
+  ->Click "Deploy"
+
+That’s it! 🎉 Your app will be live at:
+https://your-project-name.vercel.app
